@@ -41,4 +41,12 @@
         android:id="@+id/btn_activity_dial"
         android:text="Ke Activity Dial"
         android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_activity_sound_setting"
+        android:text="Ke Activity Sound Setting"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

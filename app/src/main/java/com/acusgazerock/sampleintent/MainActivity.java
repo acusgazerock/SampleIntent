@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnSub1,btnSub2, btnDial;
+    private Button btnSub1,btnSub2, btnDial, btnSoundSetting;
         private EditText textIntent;
         private String strTextIntent;
     @Override
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnSub1 = (Button) findViewById(R.id.btn_activity_sub_1);
         btnSub2 = (Button) findViewById(R.id.btn_activity_sub_2);
         btnDial = (Button) findViewById(R.id.btn_activity_dial);
+        btnSoundSetting = (Button) findViewById(R.id.btn_activity_sound_setting);
         textIntent = (EditText) findViewById(R.id.text_Intent);
         btnSub1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +43,15 @@ public class MainActivity extends AppCompatActivity {
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:082121212093"));
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0227790566"));
                 startActivity(intent);
+            }
+        });
+
+        btnSoundSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(android.provider.Settings.ACTION_SOUND_SETTINGS), 0);
             }
         });
 
